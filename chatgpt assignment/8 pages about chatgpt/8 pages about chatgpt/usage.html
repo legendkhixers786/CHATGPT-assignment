@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage of ChatGPT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+        article {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        h2 {
+            color: #000000;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .usage-info {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .usage-info h3 {
+            color: #070707;
+        }
+        .usage-info p {
+            margin-top: 10px;
+        }
+        .usage-example {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .usage-example pre {
+            background-color: #9ea1a3;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Usage of ChatGPT</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">Capabilities</a></li>
+            <li><a href="asisstant.html">Asisstant</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="apikeys.html">Apikeys</a></li>
+            <li><a href="playground.html">Playground</a></li>
+            <li><a href="tools.html">Guides</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div class="usage-info">
+            <h3>How to Use ChatGPT</h3>
+            <p>Using ChatGPT is simple and straightforward. Follow these steps to get started:</p>
+            <ol>
+                <li>Obtain an API key from the OpenAI platform.</li>
+                <li>Integrate the ChatGPT API into your application or platform.</li>
+                <li>Send requests to the API endpoints with your input text.</li>
+                <li>Receive AI-generated responses in real-time.</li>
+            </ol>
+        </div>
+        
+        <div class="usage-example">
+            <h3>Example Usage</h3>
+            <pre>
+const fetch = require('node-fetch');
+
+async function getChatGPTResponse(inputText) {
+    const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY_HERE'
+        },
+        body: JSON.stringify({
+            prompt: inputText,
+            max_tokens: 100
+        })
+    });
+    const data = await response.json();
+    return data.choices[0].text.trim();
+}
+
+// Example usage
+const inputText = 'How does ChatGPT work?';
+getChatGPTResponse(inputText).then(response => {
+    console.log(response);
+});
+            </pre>
+        </div>
+    </article>
+</body>
+</html>
