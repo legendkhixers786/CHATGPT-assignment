@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+        article {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #fff9f9;
+        }
+        h2 {
+            color: #000000;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .playground-info {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .playground-info h3 {
+            color: #0c0c0c;
+        }
+        .playground-info p {
+            margin-top: 10px;
+        }
+        .playground-demo {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .playground-demo textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+        .playground-demo button {
+            background-color: #0de05e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .playground-demo button:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ChatGPT Playground</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">Capabilities</a></li>
+            <li><a href="asisstant.html">Asisstant</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="apikeys.html">Apikeys</a></li>
+            <li><a href="guide.html">Guides</a></li>
+            <li><a href="usage.html">Usage</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div class="playground-info">
+            <h3>What is ChatGPT Playground?</h3>
+            <p>The ChatGPT Playground is an interactive web interface where users can experiment with ChatGPT, inputting text prompts and receiving AI-generated responses in real-time.</p>
+        </div>
+        
+        <div class="playground-demo">
+            <h3>Try it Yourself</h3>
+            <textarea id="input-text" placeholder="Enter your message here..."></textarea>
+            <button onclick="generateResponse()">Generate Response</button>
+            <p id="response"></p>
+        </div>
+    </article>
+    
+    <script>
+        function generateResponse() {
+            // You can implement the logic to generate response using ChatGPT API here
+            // For demonstration purposes, let's just echo the input text
+            var inputText = document.getElementById('input-text').value;
+            document.getElementById('response').innerText = inputText;
+        }
+    </script>
+</body>
+</html>
